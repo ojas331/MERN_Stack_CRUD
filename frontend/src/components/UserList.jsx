@@ -58,13 +58,13 @@ const UserList = () => {
                       to={`edit/${user._id}`}
                       className="button is-info is-small ml-2"
                     >
-                      ویرایش
+                      Edit
                     </Link>
                     <button
                       onClick={() => deleteUser(user._id)}
                       className="button is-danger is-small"
                     >
-                      حذف
+                      Delete
                     </button>
                   </td>
                 </tr>
