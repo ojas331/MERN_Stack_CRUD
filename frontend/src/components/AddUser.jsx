@@ -58,8 +58,8 @@ const AddUser = () => {
                   name="gender"
                   onChange={(e) => setGender(e.target.value)}
                 >
-                  <option value="Female">زن</option>
-                  <option value="Male">مرد</option>
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
                 </select>
               </div>
             </div>
@@ -69,7 +69,7 @@ const AddUser = () => {
           <div className="field">
             <div className="control">
               <button type="submit" className="button is-success">
-                ذخیره
+                Save
               </button>
             </div>
           </div>
