@@ -14,7 +14,7 @@ const EditUser = () => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await axios.get("http://localhost:5080/users/" + id);
+        const res = await axios.get("http://192.168.0.112:5080/users/" + id);
         setName(res.data.name);
         setEmail(res.data.email);
         setGender(res.data.gender);
@@ -29,7 +29,7 @@ const EditUser = () => {
     e.preventDefault();
 
     try{
-        await axios.patch(`http://localhost:5080/users/${id}` ,{
+        await axios.patch(`http://192.168.0.112:5080/users/${id}` ,{
             name,
             email,
             gender
@@ -45,33 +45,33 @@ const EditUser = () => {
       <div className="column is-half">
         <form onSubmit={updateUser}>
           <div className="field">
-            <label className="label">نام</label>
+            <label className="label">Name</label>
             <div className="control">
               <input
                 type="text"
                 name="name"
                 className="input"
-                placeholder="نام"
+                placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
           </div>
           <div className="field">
-            <label className="label">ایمیل</label>
+            <label className="label">Email</label>
             <div className="control">
               <input
                 type="text"
                 name="email"
                 className="input"
-                placeholder="ایمیل"
+                placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
           <div className="field">
-            <label className="label">جنسیت</label>
+            <label className="label">Gender</label>
             <div className="control">
               <div className="select is-fullwidth">
                 <select

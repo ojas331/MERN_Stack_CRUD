@@ -13,7 +13,7 @@ const AddUser = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5080/users", {
+      await axios.post("http://192.168.0.112:5080/users", {
         name,
         email,
         gender,
@@ -27,31 +27,31 @@ const AddUser = () => {
       <div className="column is-half">
         <form onSubmit={saveUser}>
           <div className="field">
-            <label className="label">نام</label>
+            <label className="label">Name</label>
             <div className="control">
               <input
                 type="text"
                 name="name"
                 className="input"
-                placeholder="نام"
+                placeholder="Name"
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
           </div>
           <div className="field">
-            <label className="label">ایمیل</label>
+            <label className="label">Email</label>
             <div className="control">
               <input
                 type="text"
                 name="email"
                 className="input"
-                placeholder="ایمیل"
+                placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
           <div className="field">
-            <label className="label">جنسیت</label>
+            <label className="label">Gender</label>
             <div className="control">
               <div className="select is-fullwidth">
                 <select

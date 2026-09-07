@@ -11,7 +11,7 @@ const UserList = () => {
 
   const handleUser = async () => {
     await axios
-      .get("http://127.0.0.1:5080/users")
+      .get("http://192.168.0.112:5080/users")
       .then((res) => {
         setUsers(res.data);
       })
@@ -22,7 +22,7 @@ const UserList = () => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:5080/users/${id}`);
+      await axios.delete(`http://192.168.0.112:5080/users/${id}`);
       handleUser();
     } catch (error) {
       console.log(error);
@@ -33,16 +33,16 @@ const UserList = () => {
     <div className="columns">
       <div className="column is-half">
         <Link to="/add" className="button is-success">
-          افزودن کاربر
+          Add User
         </Link>
         <table className="table is-striped is-fullwidth mt-5">
           <thead>
             <tr>
               <th>ID</th>
-              <th>نام</th>
-              <th>ایمیل</th>
-              <th>جنسیت</th>
-              <th>وضعیت</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Gender</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
