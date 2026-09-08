@@ -11,7 +11,7 @@ const UserList = () => {
 
   const handleUser = async () => {
     await axios
-      .get("http://192.168.0.112:5080/users")
+      .get("http://172.20.10.3:5080/users")
       .then((res) => {
         setUsers(res.data);
       })
@@ -22,7 +22,7 @@ const UserList = () => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://192.168.0.112:5080/users/${id}`);
+      await axios.delete(`http://172.20.10.3:5080/users/${id}`);
       handleUser();
     } catch (error) {
       console.log(error);

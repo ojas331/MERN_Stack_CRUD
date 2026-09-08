@@ -14,7 +14,7 @@ const EditUser = () => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await axios.get("http://192.168.0.112:5080/users/" + id);
+        const res = await axios.get("http://172.20.10.3:5080/users/" + id);
         setName(res.data.name);
         setEmail(res.data.email);
         setGender(res.data.gender);
@@ -29,7 +29,7 @@ const EditUser = () => {
     e.preventDefault();
 
     try{
-        await axios.patch(`http://192.168.0.112:5080/users/${id}` ,{
+        await axios.patch(`http://172.20.10.3:5080/users/${id}` ,{
             name,
             email,
             gender

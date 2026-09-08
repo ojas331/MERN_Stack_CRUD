@@ -13,7 +13,7 @@ const AddUser = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://192.168.0.112:5080/users", {
+      await axios.post("http://172.20.10.3:5080/users", {
         name,
         email,
         gender,
